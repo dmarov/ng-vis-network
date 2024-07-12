@@ -3,14 +3,14 @@ import { RouterOutlet } from '@angular/router';
 import { DataSet, Network } from '@diyguy/vis-network/standalone';
 
 function ctxRendererSquare({
-  ctx: any,
-  id: any,
-  x: number,
-  y: number,
-  state: { selected: boolean, hover: boolean },
-  style: any,
-  label: any,
-}) {
+  ctx,
+  i,
+  x,
+  y,
+  state: { selected, hover },
+  style,
+  label,
+}: any) {
   return {
     drawNode() {
       ctx.save();
@@ -26,14 +26,14 @@ function ctxRendererSquare({
 }
 
 function ctxRendererCircle({
-  ctx: any,
-  id: any,
-  x: number,
-  y: number,
-  state: { selected: boolean, hover: boolean },
-  style: any,
-  label: any,
-}) {
+  ctx,
+  i,
+  x,
+  y,
+  state: { selected, hover },
+  style,
+  label,
+}: any) {
   return {
     drawNode() {
       ctx.save();
